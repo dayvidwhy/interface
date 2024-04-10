@@ -4,7 +4,7 @@ import { Navigation } from "./Navigation";
 import { Home } from "lucide-react";
 
 const meta = {
-    title: "Example/Layout",
+    title: "Interface/Layout",
     component: Layout,
     tags: ["autodocs"],
     parameters: {
