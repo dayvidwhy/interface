@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Layout } from "./Layout";
+import { Navigation } from "./Navigation";
+import { Home } from "lucide-react";
 
 const meta = {
     title: "Example/Layout",
@@ -19,12 +21,17 @@ export default meta;
 export const LayoutStory: Story = {
     args: {
         header: (
-            <div className="h-full w-full bg-cyan-300">
-                Hello
-            </div>
+            <Navigation 
+                routes={[
+                    { label: "Home", icon: Home, path: "/" },
+                    { label: "About", icon: Home, path: "/about" },
+                    { label: "Contact", icon: Home, path: "/contact" },
+                ]}
+                activeRoute={{ label: "Home", path: "/" }}
+            />
         ),
         sidebar: (
-            <div className="w-full bg-orange-300">
+            <div className="w-full">
                 {Array.from({ length: 100 }).map((_, i) => (
                     <div key={i} className="h-16 w-full bg-gray-300 mb-2">
                         Test
@@ -33,7 +40,7 @@ export const LayoutStory: Story = {
             </div>
         ),
         main: (
-            <div className="h-full w-full bg-fuchsia-300">
+            <div className="h-full w-full">
                 {Array.from({ length: 100 }).map((_, i) => (
                     <div key={i} className="h-16 w-full bg-gray-300 mb-2">
                         Test
