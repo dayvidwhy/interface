@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Layout } from "./Layout";
-import { Navigation } from "./Navigation";
-import { Card } from "./Card";
-import { Footer } from "./Footer";
+import { Layout } from "@interface/layout";
+import { Navigation } from "@interface/navigation";
+import { Card } from "@interface/card";
 import { Home } from "lucide-react";
 
 const meta = {
@@ -46,14 +45,14 @@ export const LayoutStory: Story = {
         main: (
             <div className="bg-slate-50">
                 {Array.from({ length: 30 }).map((_, i) => (
-                    <div className="mx-2 mb-2">
+                    <div key={i} className="mx-2 mb-2">
                         <Card title="Header" description="Description" footer="Footer" key={i} />
                     </div>
                 ))}
             </div>
         ),
         footer: (
-            <Footer />
+            <div>Bottom</div>
         )
     }
 };

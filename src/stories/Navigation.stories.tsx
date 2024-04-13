@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Navigation } from "./Navigation";
+import { Navigation } from "@interface/navigation";
 
 const meta = {
     title: "Interface/Navigation",

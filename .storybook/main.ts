@@ -6,7 +6,6 @@ const config: StorybookConfig = {
         disableTelemetry: true
     },
     addons: [
-        "@storybook/addon-onboarding",
         "@storybook/addon-links",
         "@storybook/addon-essentials",
         "@chromatic-com/storybook",
