@@ -16,10 +16,10 @@ export const Layout = ({
             </div>
             <div className="flex-1 overflow-hidden">
                 <div className="flex flex-row h-full">
-                    <div className="w-2/12 overflow-auto">
+                    <div className="w-48 overflow-auto">
                         {sidebar}
                     </div>
-                    <div className="w-10/12 overflow-auto">
+                    <div className="flex-1 overflow-auto">
                         {main}
                     </div>
                 </div>
